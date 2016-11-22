@@ -1,0 +1,58 @@
+<section>
+    <div class="container">
+        <h1 class="text-center">LiftOff</h1>
+        <div>
+            <uib-tabset active="active" class="common-tab-content">
+                <uib-tab index="0" heading="Plan" disable="disableFirstTab">
+                    <form name="planForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" ng-model="plan.name" id="name" placeholder="Enter your Name here ..." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="value">Value</label>
+                            <input type="number" class="form-control" ng-model="plan.value" min='0' max="100" id="value" placeholder="Enter value here ..." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="start">Start Date</label>
+                            <input type="text" class="form-control" placeholder="Please enter start date" uib-datepicker-popup="{{format}}" ng-model="plan.start" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" id="start" ng-click="open1()" />
+                        </div>
+                        <div class="form-group">
+                            <label for="end">End Date</label>
+                            <input type="text" class="form-control" placeholder="Please enter end date" uib-datepicker-popup="{{format}}" ng-model="plan.end" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" id="end" ng-click="open2()" />
+                        </div>
+                        <div class="form-group errortext" ng-show="errorMessage">
+                            <span>{{errorText}}</span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" ng-disabled="planForm.$invalid" ng-click="submit(plan)">Submit</button>
+                        </div>
+                    </form>
+                </uib-tab>
+                <uib-tab index="1" heading="Report" disable="disableTab">
+                    <div class="details">
+                        <div class="form-group">
+                            <span>Name is:</span>
+                            <p>{{plan.name}}</p>
+                        </div>
+                        <div class="form-group">
+                            <span style="display: block;margin-bottom: 20px;">Value is:</span>
+                            <canvas id="canvas" height="200" width="200"></canvas>
+                        </div>
+                        <div class="form-group">
+                            <span>Start Date is:</span>
+                            <p>{{start_date}}</p>
+                        </div>
+                        <div class="form-group">
+                            <span>End Date is:</span>
+                            <p>{{end_date}}</p>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-warning" ng-click="goback(plan)">Go Back</button>
+                        </div>
+                    </div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</section>

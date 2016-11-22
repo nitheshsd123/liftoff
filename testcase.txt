@@ -1,0 +1,6 @@
+Test Cases:
+
+ 1) We cant click submit untill we enter valid fields in Plan Tab
+ 2) If we enter less than 0 or greater than 100 then also  submit button will be disable
+ 3) If we enter start date is today then end date is yesterdat then it will be error
+ 4) If we enter all details then it will taken

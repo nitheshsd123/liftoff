@@ -1,0 +1,52 @@
+.container h1 {
+    margin: 30px 0px;
+}
+
+form {
+    margin: 30px 20px;
+}
+
+.details {
+    margin: 30px 20px;
+}
+
+.details span {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border: 0px !important;
+    border-bottom: 2px solid red !important;
+    background: #eee !important;
+    color: black !important;
+}
+
+.nav-tabs>li>a:hover {
+    border-bottom: 1px solid red !important;
+    background: #eee !important;
+    color: black !important;
+}
+
+.nav-tabs>li {
+    width: 50%;
+}
+
+.errortext {
+    background: burlywood;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.errortext span {
+    width: 100%;
+    color: black;
+    padding: 10px 20px;
+    padding-top: 50px;
+    line-height: 38px;
+}
